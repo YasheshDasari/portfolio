@@ -7,7 +7,7 @@ const projects = [
     {
         title: "Clinical Treatment Planning API",
         status: "wip",
-        description: "Secure, Dockerized backend REST API for managing clinical treatment plans with JWT authentication, Role-Based Access Control (RBAC), and a full Test-Driven Development workflow. Follows a structured Requirements → Architecture → Implementation → Verification development model with full traceability documentation.",
+        description: "Secure, Dockerized backend REST API for managing clinical treatment plans with JWT authentication, Role-Based Access Control (RBAC), and a full Test-Driven Development workflow. Follows a structured Requirements -> Architecture -> Implementation -> Verification development model with full traceability documentation.",
         stack: ["NestJS", "TypeScript", "PostgreSQL", "Docker", "JWT", "Jest"],
         github: "https://github.com/YasheshDasari/clinical-treatment-planning-api",
         live: null,
@@ -25,7 +25,7 @@ const projects = [
     {
         title: "Personal Portfolio Website",
         status: "wip",
-        description: "This portfolio — built from scratch with Next.js 15, Tailwind CSS v4, and next-themes. Features dark/light mode, scroll-triggered animations, sticky navigation, interactive skills section with Devicon SVG icons, scrollable PDF publications viewer, and full responsive design. Deployed on Vercel with CI/CD on every push.",
+        description: "This portfolio - built from scratch with Next.js 15, Tailwind CSS v4, and next-themes. Features dark/light mode, scroll-triggered animations, sticky navigation, interactive skills section with Devicon SVG icons, scrollable PDF publications viewer, and full responsive design. Deployed on Vercel with CI/CD on every push.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS", "next-themes", "Lucide Icons", "Vercel"],
         github: "https://github.com/YasheshDasari",
         live: null,
