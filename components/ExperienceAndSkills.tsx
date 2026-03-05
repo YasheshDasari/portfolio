@@ -147,29 +147,26 @@ function ExperienceCard({ exp, index }: { exp: typeof experiences[0]; index: num
              style={{ transitionDelay: `${index * 100}ms` }}
         >
             <div className="flex gap-4 mb-6">
-                {/* Logo(s) */}
                 <div className="relative shrink-0 flex">
                     {hasMultipleLogos ? (
-                        <div className="relative w-14 h-10">
+                        <div className="relative w-20 h-12">
                             {"urls" in exp && Array.isArray(exp.urls) && (exp.urls as string[]).map((url: string, i: number) => (
-                                <a key={i} href={url} target="_blank" rel="noopener noreferrer"
-                                   className="absolute hover:scale-110 transition-transform duration-200"
-                                   style={{ left: `${i * 20}px`, zIndex: i }}>
-                                    <Image src={(exp as any).logos[i]} alt={exp.company} width={36} height={36}
-                                           className="rounded-full border-2 border-white dark:border-slate-900 object-cover bg-white" />
+                                <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="absolute hover:scale-110 transition-transform duration-200" style={{ left: `${i * 28}px`, zIndex: i }}>
+                                    <div className="w-12 h-12 rounded-full border-2 border-white dark:border-slate-900 bg-white flex items-center justify-center overflow-hidden p-1.5">
+                                        <Image src={(exp as any).logos[i]} alt={exp.company} width={40} height={40} className="object-contain w-full h-full" />
+                                    </div>
                                 </a>
                             ))}
                         </div>
                     ) : (
-                        <a href={"url" in exp ? exp.url as string : "#"} target="_blank" rel="noopener noreferrer"
-                           className="hover:scale-110 transition-transform duration-200">
-                            <Image src={"logo" in exp ? exp.logo as string : ""} alt={exp.company} width={40} height={40}
-                                   className="rounded-full border border-slate-200 dark:border-slate-700 object-cover bg-white" />
+                        <a href={"url" in exp ? exp.url as string : "#"} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-200">
+                            <div className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700 bg-white flex items-center justify-center overflow-hidden p-1.5">
+                                <Image src={"logo" in exp ? exp.logo as string : ""} alt={exp.company} width={40} height={40} className="object-contain w-full h-full" />
+                            </div>
                         </a>
                     )}
                 </div>
 
-                {/* Role info */}
                 <div className={hasMultipleLogos ? "ml-8" : ""}>
                     <h3 className="font-semibold text-slate-900 dark:text-white text-sm">{exp.company}</h3>
                     <p className="text-xs text-slate-500 dark:text-slate-400">{exp.role}</p>
