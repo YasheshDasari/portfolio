@@ -23,7 +23,7 @@ const experiences = [
         logos: ["/TM.png", "/UW.png"],
         urls: ["https://www.thornhillmedical.com", "https://uwaterloo.ca"],
         bullets: [
-            "Led design and development of a modular Python-based medical imaging platform combining deep learning and classical algorithms to analyze large-scale BOLD-MRI datasets — published in MDPI Healthcare.",
+            "Led design and development of a modular Python-based medical imaging platform combining deep learning and classical algorithms to analyze large-scale BOLD-MRI datasets; published in MDPI Healthcare.",
             "Architected a CNN-based classification system achieving 95% validation accuracy; containerized and deployed at Mayo Clinic, automating data pipelines by 75% and replacing legacy workflows.",
             "Built RESTful backend services (Node.js/Express) with asynchronous processing, automated unit test suites, and interactive UIs for data visualization and validation of time-series imaging data.",
         ],
