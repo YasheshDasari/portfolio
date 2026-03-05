@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-const navLinks: string[] = ["About", "Experience & Skills", "Research", "Projects", "Contact"];
+const navLinks = [
+    { label: "About", href: "#about" },
+    { label: "Experience & Skills", href: "#experienceandskills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Awards", href: "#awards" },
+    { label: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -34,8 +40,8 @@ export default function Navbar() {
                 <nav className="flex gap-6">
                     {navLinks.map((link) => {
                         return (
-                            <a key={link} href={"#" + link.toLowerCase()} className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-slate-100 transition-colors">
-                                {link}
+                            <a key={link.label} href={link.href} className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-slate-100 transition-colors">
+                                {link.label}
                             </a>
                         );
                     })}
