@@ -3,6 +3,7 @@ import ThemeProvider from "../components/ThemeProvider";
 import ThemeToggle from "../components/ThemeToggle";
 import React from "react";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ThemeToggle />
             {children}
         </ThemeProvider>
+        <Analytics />
         </body>
         </html>
     );
